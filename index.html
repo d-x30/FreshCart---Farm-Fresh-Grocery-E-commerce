@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshCart</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">FreshCart</div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#categories">Shop by Category</a></li>
+                <li><a href="#deals">Deals</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for products">
+                <button>Search</button>
+            </div>
+            <div class="user-actions">
+                <a href="#" id="cart-link">Cart (0)</a>
+                <a href="#" id="account-link">Account</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-text">
+                <h1>Farm-Fresh Groceries Delivered to Your Doorstep</h1>
+                <p>Shop a wide variety of fresh fruits, vegetables, and pantry staples.</p>
+                <button>SHOP NOW</button>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <h2>Featured Products</h2>
+            <div class="product-grid">
+                <div class="product-card" data-category="fruits" data-deal="true">
+                    <div class="badge">Sale</div>
+                    <img src="https://img1.exportersindia.com/product_images/bc-full/dir_118/3525451/apple-2406491.jpeg" alt="Organic Apples">
+                    <h3>Organic Apples</h3>
+                    <p class="price"><span class="original-price">₹2.99</span> <span class="sale-price">₹2.50</span> / lb</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-card" data-category="vegetables">
+                    <img src="https://tse3.mm.bing.net/th/id/OIP.-SzSrBZ-zmVnZT6Tg4CC0wHaGK?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Fresh Spinach">
+                    <h3>Fresh Spinach</h3>
+                    <p>₹1.50 / bunch</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-card" data-category="dairy">
+                    <img src="https://tse1.mm.bing.net/th/id/OIP.fXAZ4EvWMjEzWOs0S8BbFwHaHa?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Fresh Milk">
+                    <h3>Fresh Milk</h3>
+                    <p>₹1.20 / liter</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-card" data-category="pantry" data-deal="true">
+                    <div class="badge">Sale</div>
+                    <img src="https://tse4.mm.bing.net/th/id/OIP.CwI8fqxN4GXmrLnytlUhpwHaEJ?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Brown Bread">
+                    <h3>Brown Bread</h3>
+                    <p class="price"><span class="original-price">₹2.00</span> <span class="sale-price">₹1.75</span> / loaf</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-card" data-category="dairy">
+                    <img src="https://tse2.mm.bing.net/th/id/OIP.3gdYsJd4w-Nt-WXZ-b8-PAHaGN?rs=1&pid=ImgDetMain&o=7&rm=3" alt="Farm Eggs">
+                    <h3>Farm Eggs</h3>
+                    <p>₹3.50 / dozen</p>
+                    <button>Add to Cart</button>
+                </div>
+                <div class="product-card" data-category="fruits">
+                    <img src="https://img.freepik.com/premium-photo/realistic-photo-banana_487986-14626.jpg" alt="Bananas">
+                    <h3>Bananas</h3>
+                    <p>₹0.80 / lb</p>
+                    <button>Add to Cart</button>
+                </div>
+            </div>
+        </section>
+        <section id="categories" class="page-section">
+            <h2>Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category-card active" data-category="all">All</div>
+                <div class="category-card" data-category="fruits">Fruits</div>
+                <div class="category-card" data-category="vegetables">Vegetables</div>
+                <div class="category-card" data-category="pantry">Pantry</div>
+                <div class="category-card" data-category="dairy">Dairy & Eggs</div>
+            </div>
+        </section>
+
+        <section id="deals" class="page-section">
+            <h2>Today's Deals</h2>
+            <p>Amazing discounts on your favorite items. Check back daily!</p>
+        </section>
+
+        <section id="contact" class="page-section">
+            <h2>Contact Us</h2>
+            <form>
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <textarea placeholder="Your Message"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Account Modal -->
+    <div id="account-modal" class="modal">
+        <div class="modal-content account-modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="account-tabs">
+                <button class="tab-link active" data-tab="login">Login</button>
+                <button class="tab-link" data-tab="signup">Sign Up</button>
+            </div>
+
+            <!-- Login Form -->
+            <div id="login" class="tab-content active">
+                <form>
+                    <label for="login-email">Email:</label>
+                    <input type="email" id="login-email" name="email" required>
+                    <label for="login-password">Password:</label>
+                    <input type="password" id="login-password" name="password" required>
+                    <button type="submit" class="btn-primary">Login</button>
+                </form>
+            </div>
+
+            <!-- Sign Up Form -->
+            <div id="signup" class="tab-content">
+                <form>
+                    <label for="signup-name">Name:</label>
+                    <input type="text" id="signup-name" name="name" required>
+                    <label for="signup-email">Email:</label>
+                    <input type="email" id="signup-email" name="email" required>
+                    <label for="signup-password">Password:</label>
+                    <input type="password" id="signup-password" name="password" required>
+                    <button type="submit" class="btn-primary">Create Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <p>Total: <span id="cart-total">₹0.00</span></p>
+            <button id="buy-now-btn" class="btn-primary">Buy Now</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 FreshCart. All Rights Reserved.</p>
+        <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+        </ul>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
