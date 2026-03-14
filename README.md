@@ -48,7 +48,7 @@ orders & order_items: Handles transaction history and itemized receipts.
 Clone the repository:
 
 Bash
-git clone https://github.com/your-username/freshcart.git
+git clone https://github.com/d-x30/FreshCart---Farm-Fresh-Grocery-E-commerce
 Open the App:
 Simply open index.html in any modern web browser.
 
